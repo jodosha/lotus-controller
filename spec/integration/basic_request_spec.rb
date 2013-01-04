@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'lotus/application'
+require 'lotus/app'
 require 'support/fixtures/flowers_controller'
 
 describe 'Basic Request' do
@@ -12,7 +12,7 @@ describe 'Basic Request' do
     end
   end
 
-  let(:app) { Lotus::Application.new(Lotus::Routes) }
+  let(:app) { Lotus::App.new(Lotus::Routes) }
 
   it 'is successful' do
     get '/flowers'

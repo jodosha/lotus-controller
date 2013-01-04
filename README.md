@@ -35,7 +35,7 @@ Or install it yourself as:
       get '/flowers', controller: 'flowers'
     end
 
-    run Lotus::Application.new(Lotus::Routes)
+    run Lotus::App.new(Lotus::Routes)
 
 ## Contributing
 

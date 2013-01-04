@@ -1,7 +1,7 @@
 require 'lotus/router'
 
 module Lotus
-  class Application
+  class App
     def initialize(router)
       @router = router
     end
