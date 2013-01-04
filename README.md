@@ -31,11 +31,11 @@ Or install it yourself as:
       end
     end
 
-    Lotus::Routes = Lotus::Routing.draw do
+    Routes = Lotus::Routes.draw do
       get '/flowers', controller: 'flowers'
     end
 
-    run Lotus::App.new(Lotus::Routes)
+    run Lotus::App.new(Routes)
 
 ## Contributing
 

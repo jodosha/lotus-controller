@@ -1,13 +1,13 @@
-require 'lotus/router'
+require 'lotus/routes'
 
 module Lotus
   class App
-    def initialize(router)
-      @router = router
+    def initialize(routes)
+      @routes = routes
     end
 
     def call(env)
-      @router.call(env)
+      @routes.call(env)
     end
   end
 end

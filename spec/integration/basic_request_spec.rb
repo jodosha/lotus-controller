@@ -4,7 +4,7 @@ require 'support/fixtures/flowers_controller'
 
 describe 'Basic Request' do
   before(:all) do
-    Lotus::Routes = Lotus::Router.draw do
+    Routes = Lotus::Routes.draw do
       get '/flowers',            controller: 'flowers'
       get '/flowers/set_body',   controller: 'flowers', action: 'set_body'
       get '/flowers/set_status', controller: 'flowers', action: 'set_status'
@@ -12,7 +12,7 @@ describe 'Basic Request' do
     end
   end
 
-  let(:app) { Lotus::App.new(Lotus::Routes) }
+  let(:app) { Lotus::App.new(Routes) }
 
   it 'is successful' do
     get '/flowers'

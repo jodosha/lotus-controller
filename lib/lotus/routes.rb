@@ -2,13 +2,14 @@ require 'rack/mount'
 require 'lotus/action'
 
 module Lotus
-  class Router < Rack::Mount::RouteSet
+  class Routes < Rack::Mount::RouteSet
     def self.draw(&blk)
       new.tap {|r| r.instance_eval(&blk) }.finalize!
     end
 
     def finalize!
       freeze
+      self
     end
 
     private
