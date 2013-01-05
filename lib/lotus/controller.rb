@@ -14,6 +14,10 @@ module Lotus
       response.finish
     end
 
+    def name
+      self.class.name.gsub(/Controller$/, '').downcase
+    end
+
     private
     attr_reader :request, :response
   end
